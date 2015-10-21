@@ -1,0 +1,50 @@
+<section id="page-title" class="page-title-center">
+
+	<div class="container clearfix">
+		<h1>{{client.name}}</h1>
+		<div id="portfolio-navigation">
+			<a href="/#/clients/{{client.id - 1}}" ng-if="client.id > 1"><i class="icon-angle-left"></i></a>
+			<a href="">{{client.id}}/{{count}}</a>
+			<a href="/#/clients/{{client.id + 1}}" ng-if="client.id < count"><i class="icon-angle-right"></i></a>
+		</div>
+	</div>
+
+</section><!-- #page-title end -->
+
+<div class="bottommargin-lg"></div>
+
+
+<section id="content" class="container-fluid clearfix bottommargin">
+		<!-- Portfolio Single Content
+		============================================= -->
+		<div class="col_three_fifth portfolio-single-content nobottommargin">
+			<img src="../images/work/{{client.thumbnail}}" class="img-responsive">
+		</div><!-- .portfolio-single-content end -->
+
+		<div class="col_two_fifth col_last nobottommargin">
+			<div class="fancy-title title-dotted-border">
+				<h2>Project Info:</h2>
+			</div>
+			<span>{{client.fulldescription}}</span>
+			<br><br>
+			<div class="panel panel-default events-meta">
+				<div class="panel-body">
+					<ul class="portfolio-meta nobottommargin">
+						<li><span>Front-end:</span> {{client.frontend}}</li>
+						<li><span>Back-End:</span> {{client.backend}}</li>
+						<li><span>View Site:</span> <a href="{{client.link}}">Launch</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Portfolio Single - Meta End -->
+
+		
+
+		</div>
+
+	</div>
+	
+	
+
+</section><!-- #content end -->
+
