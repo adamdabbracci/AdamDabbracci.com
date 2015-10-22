@@ -112,6 +112,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
+          port:9000,          
           open: true,
           base: '<%= yeoman.dist %>'
         }
@@ -451,13 +452,12 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
+
     'usemin',
     'htmlmin'
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
     'test',
     'build'
   ]);
